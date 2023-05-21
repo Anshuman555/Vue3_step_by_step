@@ -20,25 +20,14 @@
         <custom-button>Custom Button</custom-button>
     </div>
 
-    <script>
-        Vue.createApp({
+    <script type="module">
+        import customButton from "./components/customButton.js"
+        const app = {
             components: {
-                customButton: {
-                    name: "custom-button",
-                    template: `
-                    <button class="btn btn-primary" :class="active ? 'disabled' : ''"><slot /></button>
-                    `,
-                    data(){
-                        return{
-                            active: true
-                        }
-                    },
-                    mounted() {
-                        alert("Single Componet Working");
-                    },
-                }
+                'custom-button' : customButton,
             }
-        }).mount("#app");
+        };
+        Vue.createApp(app).mount("#app");
     </script>
 
 
