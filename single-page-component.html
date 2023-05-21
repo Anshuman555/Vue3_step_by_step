@@ -17,16 +17,12 @@
 <body>
 
     <div id="app" class="d-flex">
-        <custom-button>Custom Button</custom-button>
+        <custom-button type="primary">Custom Button</custom-button>
     </div>
 
     <script type="module">
-        import customButton from "./components/customButton.js"
-        const app = {
-            components: {
-                'custom-button' : customButton,
-            }
-        };
+        import app from "./components/app.js"
+
         Vue.createApp(app).mount("#app");
     </script>
 
