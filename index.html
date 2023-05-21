@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        button {
+            padding: 7px 10px;
+            color: #fff;
+        }
+
+        .btn-red {
+            background-color: #ff0000;
+        }
+
+        .btn-green {
+            background-color: #008000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <p>
+                <input type="text" v-model="text">
+            </p>
+            <p>
+                {{text}}<strong> ({{text.length}})</strong>
+            </p>
+        </div>
+        <div>
+            <button :class="active ? 'btn-red' : 'btn-green'" @click="toggle()">Toggle Class Button</button>
+        </div>
+
+    </div>
+    <script>
+        const data = {
+            data() {
+                return {
+                    text: "hello World",
+                    active: false
+                }
+            },
+            methods: {
+                toggle() {
+                    this.active = !this.active;
+                }
+            }
+            // mounted() {
+            //     alert("Welcome");
+            // }
+        }
+
+        Vue.createApp(data).mount('#app');
+    </script>
+</body>
+
+</html>
