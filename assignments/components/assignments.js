@@ -15,11 +15,12 @@ export default {
     data() {
         return {
             assignments: [
-                { listItem: "HTML 5", complete: false, id: "1" },
-                { listItem: "CSS 3", complete: false, id: "2" },
-                { listItem: "Javascript", complete: false, id: "3" },
-                { listItem: "Vue", complete: false, id: "4" },
-                { listItem: "Bootstrap", complete: false, id: "5" }
+                { listItem: "HTML 5", complete: false, id: "1", tag: 'styling' },
+                { listItem: "CSS 3", complete: false, id: "2", tag: 'styling'},
+                { listItem: "Javascript", complete: false, id: "3", tag: 'styling' },
+                { listItem: "Vue", complete: false, id: "4", tag: 'framework' },
+                { listItem: "React", complete: false, id: "5", tag: 'library' },
+                { listItem: "Bootstrap", complete: false, id: "6", tag: 'styling'}
             ],
             newAssignment: ''
         }
